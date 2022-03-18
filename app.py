@@ -26,8 +26,6 @@ def index():
 def sentiment(): 
     review=request.form.get('review')
     result = model(review)
-    # return result
-    # result={'review':review}
     return jsonify({'Result':result})
 
 def model(review):
